@@ -1,0 +1,132 @@
+/*As variáveis escritos dentro do elementos root, valerá para todo o documento*/
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-blue: hsl(229, 23%, 23%);
+    --dark-grayish: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+
+}
+
+body, html {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    height: 100%;
+}
+
+.container {
+    background-color: var(--dark-cyan);
+    height: 100%;
+    position: relative;
+    overflow: hidden; /*Para setar um overflow, é preciso declarar um position*/
+    
+}
+
+.bg-pattern-top {
+    position: absolute;
+    top: -94%;
+    right: 49%;
+    z-index: 1;
+}
+
+.bg-pattern-bottom {
+    position: absolute;
+    bottom: -115%;
+    left: 45%;
+    z-index: 1;
+
+}
+
+/*Cartão*/
+
+
+.conteudo{
+    height: 100%; /*é preciso definar a altura, baseada no conteudo html, body. que é 100%*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cartao {
+    position: relative;
+    z-index: 25;
+    width: 325px;
+    height: 375px;
+    border-radius: 15px;
+  /*background-color: #fff;
+    background-image: url("images/cartao_topo.svg");
+    background-repeat: no-repeat;*/
+    /*é possível declarar em uma linha só*/
+    background: #fff url("images/cartao_topo.svg") no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartao-usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-usuario img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: solid #fff 5px;
+}
+
+.nome-usuario {
+    text-transform: capitalize; /*Transforma a primeira letra de cada palavra em maiusculo*/
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--very-dark-blue);
+    padding-top: 16px;
+}
+
+.idade-usuario {
+    color: var(--dark-grayish);
+    font-weight: 400;
+    padding-left: 6px;
+}
+
+.cidade-usuario {
+    text-transform: capitalize;
+    color: var(--dark-gray);
+    font-size: 14px;
+    padding-top: 8px;
+    margin-bottom: 16px;
+}
+
+.cartao-usuario-footer {
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #e9e9e9;
+    width: 100%;
+}
+
+.info-social {
+    display: flex;
+    justify-content: space-around;
+}
+
+.item-numero-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.social-numero {
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.descricao-numero {
+    text-transform: capitalize;
+    color: var(--dark-gray);
+    font-size: 14px;
+    
+}
